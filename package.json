@@ -1,0 +1,14 @@
+{
+  "name": "gql2php",
+  "version": "1.0.0",
+  "description": "Transforms GraphQL Definition Files into PHP-GraphQL Schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elsayed Awdallah <comando4ever@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  }
+}
