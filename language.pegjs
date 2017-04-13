@@ -24,7 +24,7 @@ decl
 		return {
 			class:d_name.type,
 			name:d_name.name,
-			interfaces:d_name.iface,
+			interfaces:d_name.iface || [],
 			fields
 		};
 	}
