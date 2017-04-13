@@ -12,7 +12,7 @@ schema = _ 'schema' __ '{' _ fields:fields? _ '}'
 		return {
 			class:'schema',
 			name: '',
-			interface: '',
+			interfaces: [],
 			fields
 		}
 	}
@@ -24,7 +24,7 @@ decl
 		return {
 			class:d_name.type,
 			name:d_name.name,
-			interface:d_name.iface,
+			interfaces:d_name.iface,
 			fields
 		};
 	}
@@ -40,9 +40,9 @@ decl_class
 	= token:('type'/'interface'/'input') { return token; }
 
 iface
-	= __ 'implements' __ iface:identifier
+	= __ 'implements' __ iface:(identifier _)+
 	{
-		return iface;
+		return iface.map ((val) => val[0]);
 	}
 
 fields = fields:field*
