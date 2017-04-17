@@ -6,7 +6,7 @@ file
 	= objects:(decl / schema)+
 	{ return objects; }
 
-schema = _ 'schema' __ '{' _ fields:fields? _ '}' _
+schema = _ 'schema' _ '{' _ fields:fields? _ '}' _
 	{
 		if (!fields) var fields = [];
 		return {
@@ -92,4 +92,4 @@ identifier
 	}
 
 _ = [ \,\t\r\n]*
-__ = [ \t\r\n]+
+__ = [ \,\t\r\n]+
