@@ -14,10 +14,6 @@ function toJSON (text) {
     return JSON.stringify(parse (text.replace (/#.*?\n/gi, '\n')));
 }
 
-if (process.argv[2] && process.argv[2] == '-f' && process.argv[3]) {
-    console.log (fromFile (process.argv[3]));
-}
-
 module.exports = {
     parse,
     toJSON,
