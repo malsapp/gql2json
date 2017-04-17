@@ -1,6 +1,6 @@
 {
   "name": "gql2json",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Transforms GraphQL Definition Files into PHP-GraphQL Schema",
   "main": "index.js",
   "scripts": {
