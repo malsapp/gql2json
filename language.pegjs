@@ -3,10 +3,10 @@
 }
 
 file
-	= objects:(decl / schema)+
+	= _ objects:(decl / schema)+ _
 	{ return objects; }
 
-schema = _ 'schema' __ '{' _ fields:fields? _ '}'
+schema = 'schema' __ '{' _ fields:fields? _ '}'
 	{
 		if (!fields) var fields = [];
 		return {
@@ -18,7 +18,7 @@ schema = _ 'schema' __ '{' _ fields:fields? _ '}'
 	}
 
 decl
-	= _ d_name:decl_name _ "{" _ fields:fields? _ "}" _
+	= d_name:decl_name _ "{" _ fields:fields? _ "}"
 	{
 		if (!fields) var fields = [];
 		return {
