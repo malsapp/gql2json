@@ -31,7 +31,10 @@ describe ('Parser', function () {
         });
 
         it ('Should ignore comments.', function () {
-            let res = Parser.parse (`#hi there`);
+            Parser.parse (`#hi there`);
+            Parser.parse (`type Person { #hi there
+                    name:String
+                }`);
         });
     });
 });
