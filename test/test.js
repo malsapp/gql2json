@@ -30,7 +30,7 @@ describe ('Parser', function () {
             assert (res2 !== undefined, true, "Couldn't handle no-spaces.");
         });
 
-        it ('Should ignore comments', function () {
+        it ('Should ignore comments.', function () {
             let res = Parser.parse (`#hi there`);
         });
     });

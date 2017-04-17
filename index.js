@@ -17,7 +17,7 @@ function fromFile (filename) {
 }
 
 function toJSON (text) {
-    return JSON.stringify(parse (text.replace (/#.*?\n/gi, '\n')));
+    return JSON.stringify(parse (text));
 }
 
 module.exports = {
