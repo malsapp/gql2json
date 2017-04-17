@@ -7,7 +7,7 @@ var _parse = peg.generate (file.toString ()).parse;
 
 function parse (text) {
     text = text.replace (/\#.*?(\n|$)/g, '');
-    if (text.length === 0) return [];
+    if (text.trim().length === 0) return [];
     return _parse (text);
 }
 
