@@ -1,4 +1,4 @@
-var Parser = require ('../index.js');
+var Parser = require ('../src/index.js');
 var assert  = require ('assert');
 
 describe ('Parser', function () {
